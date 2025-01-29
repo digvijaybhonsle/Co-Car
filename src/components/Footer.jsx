@@ -2,12 +2,18 @@ import phone from "../assets/images/footerphone.svg";
 import email from "../assets/images/footermail.svg";
 import loca from "../assets/images/footerloca.svg";
 import email2 from "../assets/images/footermail2.svg";
-import linkedin from "../assets/images/linkedinlogo.svg";
-import insta from "../assets/images/instagramlogo.svg";
+import linkedin from "../assets/images/Group110.svg";
+import insta from "../assets/images/Group111.svg";
 import logo from "../assets/images/logofooter.svg";
 import {NavLink} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact"); 
+  };
   return (
     <div className="bg-[#004E8F] px-6 py-8 lg:px-16 md:px-12 text-white mt-2">
       <div className="flex flex-col lg:flex-row justify-between items-start w-full h-auto space-y-6 lg:space-y-0">
@@ -21,12 +27,13 @@ const Footer = () => {
             Smarter, Greener, Together
           </p>
           <button
-            className="mt-7 bg-[#4CAF50] hover:bg-[#45a049] text-white rounded-full px-8 py-2 text-base sm:text-lg lg:text-sm transition-all duration-300 cursor-pointer"
+            className="mt-7 hover:bg-[#45a049] text-white rounded-full px-8 py-2 text-base sm:text-lg lg:text-sm transition-all duration-300 cursor-pointer"
             style={{
               borderRadius: "57px",
               border: "1px solid #F6F5F5",
               lineHeight: "127%",
             }}
+            onClick={handleClick}
           >
             Contact Us
           </button>

@@ -27,7 +27,7 @@ const Howitworks = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                 Sign Up and Set Your Preference
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 mt-4 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 mt-8 leading-relaxed">
                 Getting started with Co-Car is simple. Create your account using
                 your email or phone number and complete your profile. Set key
                 preferences like your pickup location, destination, and travel
@@ -43,7 +43,7 @@ const Howitworks = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                 Get Matched to Fellow Commuters
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 mt-4 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 mt-8 leading-relaxed">
                 Our advanced algorithm connects you with fellow commuters
                 traveling on similar routes at overlapping times. Share rides,
                 save money, and enjoy a more social and sustainable way to
@@ -73,7 +73,7 @@ const Howitworks = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                 Stay Informed with Real-Time Tracking
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 mt-4 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 mt-8 leading-relaxed">
                 Once your ride is confirmed, monitor it live through the app.
                 Get updates on your driver’s location, estimated arrival time,
                 and the route—keeping you informed every step of the way for a
@@ -89,7 +89,7 @@ const Howitworks = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
                 Save More, Earn Rewards
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 mt-4 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 mt-8 leading-relaxed">
                 With every shared trip, you reduce travel costs and earn reward
                 points. Accumulate points to redeem for discounts, offers, or
                 exclusive perks, turning your daily commute into a rewarding

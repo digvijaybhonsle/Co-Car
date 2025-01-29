@@ -11,7 +11,9 @@ const Header = () => {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-4">
-          <img src={logoHeader} alt="Logo" className="w-35 h-12" />
+          <NavLink to="/">
+            <img src={logoHeader} alt="Logo" className="w-35 h-12 cursor-pointer" />
+          </NavLink>
         </div>
         {/* Hamburger Icon */}
         <div className="md:hidden">
@@ -50,11 +52,10 @@ const Header = () => {
             <NavLink
               key={index}
               to={item.path}
-              className={
-                ({ isActive }) =>
-                  isActive
-                    ? "text-blue-500 font-semibold" // Active link color
-                    : "text-gray-700 hover:text-blue-500 transition-colors" // Inactive link color
+              className={({ isActive }) =>
+                isActive
+                  ? "text-blue-500 font-semibold" 
+                  : "text-gray-700 hover:text-blue-500 transition-colors" 
               }
             >
               {item.name}
@@ -76,11 +77,10 @@ const Header = () => {
               <NavLink
                 key={index}
                 to={item.path}
-                className={
-                  ({ isActive }) =>
-                    isActive
-                      ? "text-blue-600 font-medium bg-gray-100 px-4 py-2 rounded-lg" // Active link style
-                      : "text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-all" // Inactive link style
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-blue-600 font-medium bg-gray-100 px-4 py-2 rounded-lg" // Active link style
+                    : "text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-all" // Inactive link style
                 }
                 onClick={() => setIsMenuOpen(false)} // Close menu after clicking
               >

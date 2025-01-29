@@ -5,21 +5,79 @@ import insta from "../assets/images/contactinsta.svg";
 import linkedin from "../assets/images/contactlinkein.svg";
 
 const Contact = () => {
+  const [errors, setErrors] = useState({});
+  const [, setSubmitSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
-    contact: "", 
+    contact: "",
     email: "",
     subject: "",
     message: "",
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^[0-9]{10}$/;
+
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+    }
+
+    if (!formData.contact) {
+      newErrors.contact = "Contact number is required";
+    } else if (!phoneRegex.test(formData.contact)) {
+      newErrors.contact = "Invalid phone number (10 digits required)";
+    }
+
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = "Subject is required";
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+    const isValid = validateForm();
+
+    if (isValid) {
+      console.log("Form Data Submitted:", formData);
+      // Add your submission logic here (API call, etc.)
+
+      // Reset form
+      setFormData({
+        name: "",
+        contact: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setErrors({});
+      setSubmitSuccess(true);
+
+      // Hide success message after 3 seconds
+      setTimeout(() => setSubmitSuccess(false), 3000);
+    }
   };
 
   return (
@@ -31,7 +89,7 @@ const Contact = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-10">
           {/* Left Content */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full text-lg md:text-xl md:w-1/2">
             <h1 className="text-3xl font-semibold text-gray-900">
               Let’s Connect and Transform Ride-Sharing
             </h1>
@@ -84,7 +142,7 @@ const Contact = () => {
                 <img
                   src={linkedin}
                   alt="LinkedIn"
-                  className="w-6 h-6 cursor-pointer hover:opacity-80"
+                  className="w-6 h-6 cursor-pointer hover:opacity-80 mb-1"
                 />
                 <img
                   src={insta}
@@ -136,8 +194,15 @@ const Contact = () => {
                 cols="30"
                 rows="5"
                 placeholder="Your Message"
-                className="px-4 py-2 border border-gray-400 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none w-full"
+                className={`px-4 py-2 border ${
+                  errors.message ? "border-red-500" : "border-gray-400"
+                } rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none w-full resize-none`}
               />
+              {errors.message && (
+                <span className="text-red-500 text-sm mt-1 block">
+                  {errors.message}
+                </span>
+              )}
               <button
                 type="submit"
                 className="bg-[#004E8F] text-white font-medium py-4 rounded-lg hover:bg-blue-700 transition duration-300 w-full cursor-pointer"

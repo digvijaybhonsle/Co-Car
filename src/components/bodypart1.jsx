@@ -1,13 +1,17 @@
 import App2 from "../assets/gifs/App2.gif";
 import App1 from "../assets/gifs/App1.gif";
 import Man from "../assets/images/Man1.svg";
-// import WhycoCar from "../assets/gifs/WhyCOo-Car.gif";
-// import Howitworks from "../assets/gifs/Howitworks.gif";
+import { useNavigate } from "react-router-dom";
 
 const Landingbody1 = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/contact"); 
+  };
   return (
     <div className="w-full px-6 py-4">
-      <div className="flex flex-col lg:flex-row w-full h-auto bg-white py-6">
+      <div className="flex flex-col lg:flex-row w-full lg:h-[700px] bg-white py-6">
         {/* Image Section */}
         <div className="relative w-full lg:w-1/2 flex items-center justify-end bg-white overflow-hidden py-10">
           {/* Background Animation - Second GIF */}
@@ -44,14 +48,14 @@ const Landingbody1 = () => {
           </h1>
 
           {/* Description */}
-          <p className="text-[#323131] text-sm sm:text-base lg:text-lg leading-relaxed max-w-full sm:max-w-[90%] lg:max-w-[75%]">
+          <p className="text-[#323131] text-3xl md:text-2xl sm:text-base lg:text-lg leading-relaxed max-w-full sm:max-w-[90%] lg:max-w-[75%]">
             Revolutionizing urban mobility through innovative, sustainable, and
             technology-driven car-sharing solutions, fostering efficiency,
             safety, and environmental responsibility.
           </p>
 
           {/* Button */}
-          <button className="bg-[#004E8F] hover:bg-[#00376a] text-white rounded-full w-[200px] sm:w-[250px] lg:w-[300px] h-[50px] flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer">
+          <button className="bg-[#004E8F] hover:bg-[#00376a] text-white rounded-full w-[200px] sm:w-[250px] lg:w-[300px] h-[50px] flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer mt-6" onClick={handleClick}>
             Start Your Journey Today
           </button>
         </div>

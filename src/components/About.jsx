@@ -10,7 +10,7 @@ const About = () => {
       <div className="space-y-3">
         <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-2">
           {/* Heading Section */}
-          <div className="font-bold text-[30px] text-center md:text-left">
+          <div className="font-bold text-[45px] text-center md:text-left">
             <h1>
               About <span className="text-[#004E8F]">Co-Car</span>
             </h1>
@@ -21,13 +21,13 @@ const About = () => {
             <img
               src={aboutgif}
               alt=""
-              className="w-full max-w-[500px] h-auto"
+              className="w-full max-w-[700px] h-auto"
             />
           </div>
         </div>
 
         <div className="px-4 md:px-0">
-          <p className="text-[16px] md:text-[18px] font-semibold tracking-[-0.25px] leading-relaxed text-center md:text-left">
+          <p className="text-lg md:text-2xl font-semibold tracking-[-0.25px] leading-relaxed text-center md:text-left">
             <span className="text-[#004E8F]">Co-Car</span> is a smart
             co-commuting platform that connects daily fleet commuters and
             travelers for shared rides, making urban transportation efficient,
