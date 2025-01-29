@@ -4,7 +4,7 @@ import anikeshimg from "../assets/images/ANIKESHSVG.svg";
 import shrutimg from "../assets/images/SHURTISONONE.svg";
 import piyush from "../assets/images/PIYUSHIMG.svg";
 
-const Aboutbody = () => {
+const About = () => {
   return (
     <div className="px-6 py-2 lg:px-35 md:px-25">
       <div className="space-y-3">
@@ -64,4 +64,4 @@ const Aboutbody = () => {
   );
 };
 
-export default Aboutbody;
+export default About;

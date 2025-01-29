@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import logoHeader from "../assets/images/logoheader.svg";
 
 const Header = () => {
@@ -42,16 +43,20 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-12">
-          {["Home", "About Us", "How it works?", "Contact"].map(
-            (item, index) => (
-              <div
-                key={index}
-                className="cursor-pointer hover:text-blue-500 transition-colors"
-              >
-                {item}
-              </div>
-            )
-          )}
+          {[
+            { name: "Home", path: "/" },
+            { name: "About Us", path: "/about" },
+            { name: "How it Works?", path: "/how-it-works" },
+            { name: "Contact", path: "/contact" },
+          ].map((item, index) => (
+            <Link
+              key={index}
+              to={item.path}
+              className="cursor-pointer hover:text-blue-500 transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
         </nav>
       </div>
 
@@ -59,16 +64,21 @@ const Header = () => {
       {isMenuOpen && (
         <div className="absolute top-16 left-0 w-full bg-white shadow-md rounded-b-lg border-t border-gray-300 md:hidden">
           <nav className="flex flex-col space-y-4 py-4 px-6">
-            {["Home", "About Us", "How it works?", "Contact"].map(
-              (item, index) => (
-                <div
-                  key={index}
-                  className="cursor-pointer text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-all"
-                >
-                  {item}
-                </div>
-              )
-            )}
+            {[
+              { name: "Home", path: "/" },
+              { name: "About Us", path: "/about" },
+              { name: "How it Works?", path: "/how-it-works" },
+              { name: "Contact", path: "/contact" },
+            ].map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                className="cursor-pointer text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-all"
+                onClick={() => setIsMenuOpen(false)} // Close menu after clicking
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
         </div>
       )}
