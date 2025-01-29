@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 // import Aboutbody from './components/Aboutbody'
 import Howitworks from './components/Howitworks'
+// import Contact from './components/Contact'
 // import Landingbody from './components/Landingbody'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       {/* <Landingbody /> */}
       {/* <Aboutbody /> */}
       <Howitworks />
+      {/* <Contact /> */}
       <Footer />
     </div>
   )
