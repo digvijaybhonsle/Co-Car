@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logoHeader from "../assets/images/logoheader.svg";
 
 const Header = () => {
@@ -13,7 +13,6 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <img src={logoHeader} alt="Logo" className="w-35 h-12" />
         </div>
-
         {/* Hamburger Icon */}
         <div className="md:hidden">
           <button
@@ -40,7 +39,6 @@ const Header = () => {
             </svg>
           </button>
         </div>
-
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-12">
           {[
@@ -49,13 +47,18 @@ const Header = () => {
             { name: "How it Works?", path: "/how-it-works" },
             { name: "Contact", path: "/contact" },
           ].map((item, index) => (
-            <Link
+            <NavLink
               key={index}
               to={item.path}
-              className="cursor-pointer hover:text-blue-500 transition-colors"
+              className={
+                ({ isActive }) =>
+                  isActive
+                    ? "text-blue-500 font-semibold" // Active link color
+                    : "text-gray-700 hover:text-blue-500 transition-colors" // Inactive link color
+              }
             >
               {item.name}
-            </Link>
+            </NavLink>
           ))}
         </nav>
       </div>
@@ -70,14 +73,19 @@ const Header = () => {
               { name: "How it Works?", path: "/how-it-works" },
               { name: "Contact", path: "/contact" },
             ].map((item, index) => (
-              <Link
+              <NavLink
                 key={index}
                 to={item.path}
-                className="cursor-pointer text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-all"
+                className={
+                  ({ isActive }) =>
+                    isActive
+                      ? "text-blue-600 font-medium bg-gray-100 px-4 py-2 rounded-lg" // Active link style
+                      : "text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-all" // Inactive link style
+                }
                 onClick={() => setIsMenuOpen(false)} // Close menu after clicking
               >
                 {item.name}
-              </Link>
+              </NavLink>
             ))}
           </nav>
         </div>

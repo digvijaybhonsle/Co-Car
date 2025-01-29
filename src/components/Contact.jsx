@@ -71,7 +71,7 @@ const Contact = () => {
             </p>
 
             {/* Socials */}
-            <div className="mt-6">
+            <div className="mt-10">
               <h2 className="text-lg font-semibold text-gray-800">
                 Follow Us:
               </h2>
@@ -79,17 +79,17 @@ const Contact = () => {
                 <img
                   src={email}
                   alt="Email"
-                  className="w-8 h-8 cursor-pointer hover:opacity-80"
+                  className="w-8 h-10 cursor-pointer hover:opacity-80"
                 />
                 <img
                   src={linkedin}
                   alt="LinkedIn"
-                  className="w-8 h-8 cursor-pointer hover:opacity-80"
+                  className="w-6 h-6 cursor-pointer hover:opacity-80"
                 />
                 <img
                   src={insta}
                   alt="Instagram"
-                  className="w-8 h-8 cursor-pointer hover:opacity-80"
+                  className="w-6 h-6 cursor-pointer hover:opacity-80"
                 />
               </div>
             </div>
