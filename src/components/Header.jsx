@@ -6,13 +6,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-100 px-6 py-4 lg:px-35 md:px-25">
+    <header className="bg-gray-100 px-6 py-6 lg:px-35 md:px-25">
       {/* Logo and Hamburger Menu */}
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <NavLink to="/">
-            <img src={logoHeader} alt="Logo" className="w-35 h-12 cursor-pointer" />
+            <img src={logoHeader} alt="Logo" className="w-45 h-15 cursor-pointer" />
           </NavLink>
         </div>
         {/* Hamburger Icon */}
@@ -42,7 +42,7 @@ const Header = () => {
           </button>
         </div>
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-12">
+        <nav className="hidden md:flex space-x-12 text-xl">
           {[
             { name: "Home", path: "/" },
             { name: "About Us", path: "/about" },
@@ -54,7 +54,7 @@ const Header = () => {
               to={item.path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 font-semibold" 
+                  ? "text-blue-500 font-semibold hover:underline underline" 
                   : "text-gray-700 hover:text-blue-500 transition-colors" 
               }
             >
@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Dropdown Navigation for Mobile */}
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md rounded-b-lg border-t border-gray-300 md:hidden">
+        <div className="absolute top-26 left-0 w-full bg-white shadow-md rounded-b-lg border-t border-gray-300 md:hidden z-10">
           <nav className="flex flex-col space-y-4 py-4 px-6">
             {[
               { name: "Home", path: "/" },

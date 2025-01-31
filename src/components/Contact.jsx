@@ -63,6 +63,7 @@ const Contact = () => {
     if (isValid) {
       console.log("Form Data Submitted:", formData);
       // Add your submission logic here (API call, etc.)
+      alert("Form submitted succesfully!!")
 
       // Reset form
       setFormData({

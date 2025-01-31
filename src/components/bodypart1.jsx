@@ -10,7 +10,7 @@ const Landingbody1 = () => {
     navigate("/contact"); 
   };
   return (
-    <div className="w-full px-6 py-4">
+    <div className="w-full px-6 py-4 z-[-1]">
       <div className="flex flex-col lg:flex-row w-full lg:h-[700px] bg-white py-6">
         {/* Image Section */}
         <div className="relative w-full lg:w-1/2 flex items-center justify-end bg-white overflow-hidden py-10">
@@ -33,7 +33,7 @@ const Landingbody1 = () => {
             src={Man}
             alt="Landing visual"
             loading="lazy"
-            className="z-10 max-w-[80%] sm:max-w-md h-auto object-contain rounded-lg"
+            className="max-w-[80%] sm:max-w-md h-auto object-contain rounded-lg"
           />
         </div>
 

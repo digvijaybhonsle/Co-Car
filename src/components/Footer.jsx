@@ -45,7 +45,7 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/"
-                className="hover:text-[#4CAF50] cursor-pointer"
+                className="hover:text-[#4CAF50] cursor-pointer hover:underline"
                 activeClassName="text-[#4CAF50]" // This will add the green color for active link
               >
                 Home
@@ -54,7 +54,7 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/about"
-                className="hover:text-[#4CAF50] cursor-pointer"
+                className="hover:text-[#4CAF50] cursor-pointer hover:underline"
                 activeClassName="text-[#4CAF50]" // Active color for "About"
               >
                 About
@@ -63,7 +63,7 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/how-it-works"
-                className="hover:text-[#4CAF50] cursor-pointer"
+                className="hover:text-[#4CAF50] cursor-pointer hover:underline"
                 activeClassName="text-[#4CAF50]" // Active color for "How it works"
               >
                 How it works
@@ -72,7 +72,7 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/contact"
-                className="hover:text-[#4CAF50] cursor-pointer"
+                className="hover:text-[#4CAF50] cursor-pointer hover:underline"
                 activeClassName="text-[#4CAF50]" // Active color for "Contact"
               >
                 Contact
@@ -120,9 +120,20 @@ const Footer = () => {
 
       {/* Footer Bottom */}
       <div className="mt-8 text-center">
-        <p className="text-sm my-4">&copy; 2025 Co-Car. All rights reserved.</p>
-        <p className="text-sm">Made with love by @dgvj_26</p>
-      </div>
+  <p className="text-sm my-4">&copy; 2025 Co-Car. All rights reserved.</p>
+  <p className="text-sm">
+    Made with love by  
+    <a 
+      href="https://in.linkedin.com/in/digvijay-bhonsle" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="hover:underline"
+    >
+      DGVJ@26
+    </a>
+  </p>
+</div>
+
     </div>
   );
 };
