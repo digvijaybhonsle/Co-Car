@@ -1,4 +1,4 @@
-import aboutgif from "../assets/gifs/aboutus.gif";
+import aboutgif from "../assets/gifs/actualgif-ezgif.com-crop.gif";
 import Card from "./Card";
 import anikeshimg from "../assets/images/ANIKESHSVG.svg";
 import shrutimg from "../assets/images/SHURTISONONE.svg";
@@ -21,7 +21,7 @@ const About = () => {
             <img
               src={aboutgif}
               alt=""
-              className="w-full max-w-[700px] h-auto"
+              className="w-full max-w-[800px] h-auto"
             />
           </div>
         </div>
@@ -35,7 +35,7 @@ const About = () => {
             intelligent matching algorithms, and a rewarding system, Co-Car
             reduces individual travel costs by up to 80% while promoting
             sustainability. Together, let’s redefine commuting for a better
-            future—one shared ride at a time.
+            future-one shared ride at a time.
           </p>
         </div>
 
@@ -46,16 +46,22 @@ const About = () => {
               image={anikeshimg}
               title="Anikesh Gadekar"
               description="Founder"
+              linkedinLink="https://www.linkedin.com/in/anikesh-gadekar"
+              mailLink="anikeshgadekar125@gmail.com"
             />
             <Card
               image={piyush}
               title="Piyush Agroya"
               description="Co-Founder"
+              linkedinLink="https://www.linkedin.com/in/piyush-agroya-8040b6254/"
+              mailLink="devxpiyush16.02@gmail.com"
             />
             <Card
               image={shrutimg}
               title="Shruti Sonone"
               description="Co-Founder"
+              linkedinLink="https://www.linkedin.com/in/shrutisonone24/"
+              mailLink="shrutisonone24@gmail.com"
             />
           </div>
         </div>
