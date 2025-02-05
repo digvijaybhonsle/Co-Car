@@ -48,6 +48,20 @@ const Contact = () => {
     if (validateForm()) {
       console.log("Form Data Submitted:", formData);
       setIsSubmitted(true);
+
+      // Sending data to Google Sheets (via API or direct POST request)
+      fetch("https://script.google.com/macros/s/AKfycby45ONMz3ErfucZwIuAr0tKmJmTJK0bsvQGb9Zpwz1SWbgoQFE9UC1BSwIhHlVMVs0RBA/exec", {
+        method: "POST",
+        body: new URLSearchParams({
+          Name: formData.name,
+          Contact: formData.contact,
+          Email: formData.email,
+          Subject: formData.subject,
+          Message: formData.message,
+        }),
+      });
+
+      // Reset the form after submission
       setFormData({
         name: "",
         contact: "",
@@ -142,32 +156,32 @@ const Contact = () => {
                 type="text"
                 value={formData.name}
                 onChange={handleChange}
-                name="name"
+                name="name"  // Matching form name
                 placeholder="Name"
               />
               <InputBox
                 type="text"
                 value={formData.contact}
                 onChange={handleChange}
-                name="contact"
+                name="contact"  // Matching form name
                 placeholder="Contact No"
               />
               <InputBox
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                name="email"
+                name="email"  // Matching form name
                 placeholder="Email ID"
               />
               <InputBox
                 type="text"
                 value={formData.subject}
                 onChange={handleChange}
-                name="subject"
+                name="subject"  // Matching form name
                 placeholder="Subject"
               />
               <textarea
-                name="message"
+                name="message"  // Matching form name
                 value={formData.message}
                 onChange={handleChange}
                 cols="30"
