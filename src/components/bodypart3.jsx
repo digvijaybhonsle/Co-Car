@@ -25,14 +25,14 @@ const Landingbody3 = () => {
 
         {/* Right Content */}
         <div className="w-full lg:w-1/2 px-4 sm:px-6 lg:px-12">
-          <p className="text-[#38393C] text-lg md:text-xl sm:text-base lg:text-xl leading-relaxed pr-8 sm:pr-16 lg:pr-40">
+          <p className="text-[#38393C] text-lg md:text-xl sm:text-base lg:text-4lg leading-relaxed pr-8 sm:pr-16 lg:pr-40">
             Sign up, set your route, and let Co-Car match you with shared rides.{" "}
             <span className="text-[#4CAF50] font-bold">
               Book easily, track in real-time, save on costs, and earn rewards
             </span>{" "}
             while contributing to eco-friendly commuting!
           </p>
-          <button className="mt-10 bg-[#004E8F] hover:bg-[#00376a] text-white rounded-full w-[200px] sm:w-[220px] lg:w-[250px] h-[50px] flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer" onClick={handleClick}>
+          <button className="mt-10 bg-[#004E8F] hover:bg-[#00376a] text-white rounded-full w-[200px] sm:w-[220px] lg:w-[230px] h-[50px] flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer" onClick={handleClick}>
             Learn More
           </button>
         </div>
