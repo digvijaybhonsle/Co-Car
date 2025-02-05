@@ -36,6 +36,7 @@ function App() {
         <Header />
         <AppRoutes />
         <Footer />
+        hello
       </div>
     </Router>
   );
