@@ -33,10 +33,9 @@ function App() {
   return (
     <Router>
       <div className="bg-[#FFF] font-family-poppins">
-        <Header />
+        <Header className="fixed"/>
         <AppRoutes />
         <Footer />
-        hello
       </div>
     </Router>
   );

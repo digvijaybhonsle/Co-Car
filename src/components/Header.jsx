@@ -6,13 +6,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-gray-100 px-6 py-6 lg:px-35 md:px-25">
+    <header className="fixed top-0 left-0 w-full bg-white px-6 py-6 lg:px-35 md:px-25 z-50">
       {/* Logo and Hamburger Menu */}
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <NavLink to="/">
-            <img src={logoHeader} alt="Logo" className="w-45 h-15 cursor-pointer" />
+            <img src={logoHeader} alt="Logo" className="w-55 h-16 cursor-pointer" />
           </NavLink>
         </div>
         {/* Hamburger Icon */}
