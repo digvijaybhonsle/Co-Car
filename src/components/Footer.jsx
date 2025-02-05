@@ -45,8 +45,11 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/"
-                className="hover:text-[#4CAF50] cursor-pointer hover:underline"
-                activeClassName="text-[#4CAF50]" // This will add the green color for active link
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#4CAF50] cursor-pointer hover:underline"
+                    : "hover:text-[#4CAF50] cursor-pointer hover:underline"
+                }
               >
                 Home
               </NavLink>
@@ -54,8 +57,11 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/about"
-                className="hover:text-[#4CAF50] cursor-pointer hover:underline"
-                activeClassName="text-[#4CAF50]" // Active color for "About"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#4CAF50] cursor-pointer hover:underline"
+                    : "hover:text-[#4CAF50] cursor-pointer hover:underline"
+                }
               >
                 About
               </NavLink>
@@ -63,8 +69,11 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/how-it-works"
-                className="hover:text-[#4CAF50] cursor-pointer hover:underline"
-                activeClassName="text-[#4CAF50]" // Active color for "How it works"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#4CAF50] cursor-pointer hover:underline"
+                    : "hover:text-[#4CAF50] cursor-pointer hover:underline"
+                }
               >
                 How it works
               </NavLink>
@@ -72,14 +81,18 @@ const Footer = () => {
             <li>
               <NavLink
                 to="/contact"
-                className="hover:text-[#4CAF50] cursor-pointer hover:underline"
-                activeClassName="text-[#4CAF50]" // Active color for "Contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#4CAF50] cursor-pointer hover:underline"
+                    : "hover:text-[#4CAF50] cursor-pointer hover:underline"
+                }
               >
                 Contact
               </NavLink>
             </li>
           </ul>
         </div>
+
         {/* Column 3 */}
         <div className="flex-1 text-lg mb-6 lg:mb-0 items-center justify-center">
           <h3 className="text-xl font-bold mb-5">Contact Us</h3>
@@ -87,17 +100,11 @@ const Footer = () => {
             <li className="flex items-center space-x-2">
               <img className="w-4 h-4" src={phone} alt="Phone" />
               <span>
-                <a
-                  href="tel:+918055295930"
-                  className="hover:underline"
-                >
+                <a href="tel:+918055295930" className="hover:underline">
                   +91 80552 95930
                 </a>
                 ,
-                <a
-                  href="tel:+919096238060"
-                  className="hover:underline"
-                >
+                <a href="tel:+919096238060" className="hover:underline">
                   +91 90962 38060
                 </a>
               </span>

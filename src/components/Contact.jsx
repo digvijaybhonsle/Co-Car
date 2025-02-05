@@ -3,10 +3,10 @@ import { useState } from "react";
 import email from "../assets/images/contactemail.svg";
 import insta from "../assets/images/contactinsta.svg";
 import linkedin from "../assets/images/contactlinkein.svg";
+import overley from "../assets/gifs/overlay.gif";
 
 const Contact = () => {
   const [errors, setErrors] = useState({});
-  const [, setSubmitSuccess] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     contact: "",
@@ -14,6 +14,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -28,29 +29,15 @@ const Contact = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const phoneRegex = /^[0-9]{10}$/;
 
-    if (!formData.name.trim()) {
-      newErrors.name = "Name is required";
-    }
-
-    if (!formData.contact) {
-      newErrors.contact = "Contact number is required";
-    } else if (!phoneRegex.test(formData.contact)) {
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!formData.contact) newErrors.contact = "Contact number is required";
+    else if (!phoneRegex.test(formData.contact))
       newErrors.contact = "Invalid phone number (10 digits required)";
-    }
-
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-    } else if (!emailRegex.test(formData.email)) {
+    if (!formData.email) newErrors.email = "Email is required";
+    else if (!emailRegex.test(formData.email))
       newErrors.email = "Invalid email format";
-    }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = "Subject is required";
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = "Message is required";
-    }
+    if (!formData.subject.trim()) newErrors.subject = "Subject is required";
+    if (!formData.message.trim()) newErrors.message = "Message is required";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -58,14 +45,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const isValid = validateForm();
-
-    if (isValid) {
+    if (validateForm()) {
       console.log("Form Data Submitted:", formData);
-      // Add your submission logic here (API call, etc.)
-      alert("Form submitted succesfully!!")
-
-      // Reset form
+      setIsSubmitted(true);
       setFormData({
         name: "",
         contact: "",
@@ -74,23 +56,46 @@ const Contact = () => {
         message: "",
       });
       setErrors({});
-      setSubmitSuccess(true);
-
-      // Hide success message after 3 seconds
-      setTimeout(() => setSubmitSuccess(false), 3000);
     }
   };
 
   return (
-    <div className="px-6 py-8 lg:px-35 md:px-12 w-full">
+    <div className="px-6 py-8 lg:px-35 md:px-12 w-full lg:mt-20">
       <div className="space-y-12 mb-10 w-full">
-        <h1 className="text-3xl font-bold text-center text-gray-800">
+        <h1 className="text-4xl font-bold text-center text-gray-800">
           Contact Us
         </h1>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-10">
+        {/* Modal */}
+        {isSubmitted && (
+          <div className="fixed inset-0 flex justify-center items-center z-50 bg-opacity-20 backdrop-blur-sm h-full" style={{ backgroundAttachment: 'fixed' }}>
+            <div className="bg-white p-8 rounded-lg text-center shadow-lg w-200 h-170">
+              <img
+                src={overley}
+                alt="Success"
+                className="w-80 h-80 mx-auto mb-4"
+              />
+              <h1 className="text-[#004E8F] text-4xl font-bold py-8">
+                Got thoughts to melt? Let’s Chat!
+              </h1>
+              <p className="text-2xl px-8">
+                We’ve got your message, someone from our team will be contacting
+                you soon. Till then, Chillax! 🧘
+              </p>
+              <button
+                className="bg-[#004E8F] text-white py-4 px-4 rounded-4xl w-1/2 mt-8 cursor-pointer"
+                onClick={() => setIsSubmitted(false)}
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Main Container */}
+        <div className="flex flex-col md:flex-row justify-between items-start w-full gap-12">
           {/* Left Content */}
-          <div className="w-full text-lg md:text-xl md:w-1/2">
+          <div className="text-lg md:text-xl md:w-1/2">
             <h1 className="text-3xl font-semibold text-gray-900">
               Let’s Connect and Transform Ride-Sharing
             </h1>
@@ -99,8 +104,7 @@ const Contact = () => {
               we value your feedback and are committed to providing you with the
               best experience possible. Whether you have a query about our
               services, need assistance with the app, or want to share your
-              suggestions, we’d love to hear from you! Your insights help us
-              improve and make Co-Car a better platform for everyone.
+              suggestions, we’d love to hear from you!
             </p>
 
             {/* Why Reach Out? */}
@@ -122,14 +126,12 @@ const Contact = () => {
 
             {/* Business Collaboration */}
             <p className="mt-6 text-gray-700">
-              We also believe in the power of collaboration. If you’re an
-              investor or business partner interested in being part of our
-              journey, we’re open to funding and partnership opportunities.
-              Together, we can redefine commuting and create a more connected,
-              sustainable world.
+              If you’re an investor or business partner interested in
+              collaborating, we’re open to funding and partnership
+              opportunities.
             </p>
 
-            {/* Socials */}
+            {/* Social Media */}
             <div className="mt-10">
               <h2 className="text-lg font-semibold text-gray-800">
                 Follow Us:
