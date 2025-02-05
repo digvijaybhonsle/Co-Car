@@ -47,7 +47,7 @@ const Footer = () => {
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-[#4CAF50] cursor-pointer hover:underline"
+                    ? "text-[#4CAF50] underline cursor-pointer hover:underline"
                     : "hover:text-[#4CAF50] cursor-pointer hover:underline"
                 }
               >
@@ -59,7 +59,7 @@ const Footer = () => {
                 to="/about"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-[#4CAF50] cursor-pointer hover:underline"
+                    ? "text-[#4CAF50] underline cursor-pointer hover:underline"
                     : "hover:text-[#4CAF50] cursor-pointer hover:underline"
                 }
               >
@@ -71,7 +71,7 @@ const Footer = () => {
                 to="/how-it-works"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-[#4CAF50] cursor-pointer hover:underline"
+                    ? "text-[#4CAF50] underline cursor-pointer hover:underline"
                     : "hover:text-[#4CAF50] cursor-pointer hover:underline"
                 }
               >
@@ -83,7 +83,7 @@ const Footer = () => {
                 to="/contact"
                 className={({ isActive }) =>
                   isActive
-                    ? "text-[#4CAF50] cursor-pointer hover:underline"
+                    ? "text-[#4CAF50] cursor-pointer underline hover:underline"
                     : "hover:text-[#4CAF50] cursor-pointer hover:underline"
                 }
               >
