@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
         {/* Column 2 */}
         <div className="flex-1 text-lg mb-6 lg:mb-0 items-center justify-center lg:pl-20">
-          <h3 className="text-2xl font-bold mb-5">Links</h3>
+          <h3 className="text-xl font-bold mb-5">Links</h3>
           <ul className="space-y-5">
             <li>
               <NavLink
