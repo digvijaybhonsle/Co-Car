@@ -13,35 +13,38 @@ const Landingbody1 = () => {
   return (
     <div className="w-full px-4 sm:px-6 lg:px-10 py-8">
       <div className="flex flex-col lg:flex-row items-center w-full lg:h-[700px] bg-white py-6">
-        {/* Image Section */}
-        <div className="relative w-full lg:w-1/2 flex items-center justify-center lg:justify-end bg-white overflow-hidden py-10">
-          {/* Foreground Image (Man) */}
-          <img
-            src={Man}
-            alt="Landing visual"
-            loading="lazy"
-            className="w-[70%] sm:w-[450px] lg:w-[450px] h-auto object-contain rounded-lg relative z-10"
-          />
-
-          {/* Background Animations (GIFs) */}
-          <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center lg:items-end justify-center">
+        
+        {/* GIFs + Image Section */}
+        <div className="relative w-full lg:w-1/2 flex flex-col-reverse sm:flex-row items-center justify-center lg:justify-start bg-white overflow-hidden py-10 space-y-4 sm:space-y-0 sm:space-x-6">
+          
+          {/* GIFs on the Left */}
+          <div className="flex flex-col items-center sm:items-start">
             <img
               src={App2}
               alt="App2 animation"
               loading="lazy"
-              className="w-1/3 sm:w-1/2 lg:w-1/3 opacity-60 animate-pulse mb-6 sm:mb-10"
+              className="w-1/3 sm:w-1/2 lg:w-1/3 opacity-80 animate-pulse mb-4"
             />
             <img
               src={App1}
               alt="App1 animation"
               loading="lazy"
-              className="w-1/3 sm:w-1/2 lg:w-1/3 opacity-60 animate-pulse"
+              className="w-1/3 sm:w-1/2 lg:w-1/3 opacity-80 animate-pulse"
             />
           </div>
+
+          {/* Man Image on the Right */}
+          <img
+            src={Man}
+            alt="Landing visual"
+            loading="lazy"
+            className="w-[70%] sm:w-[350px] lg:w-[450px] h-auto object-contain rounded-lg"
+          />
         </div>
 
         {/* Text Section */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-4 sm:px-6 lg:px-10 space-y-4 sm:space-y-6">
+          
           {/* Headings */}
           <h1 className="text-[#38393C] font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight">
             Transforming Co-Commuting:
@@ -65,6 +68,7 @@ const Landingbody1 = () => {
             Start Your Journey Today
           </button>
         </div>
+
       </div>
     </div>
   );
