@@ -20,7 +20,7 @@ const Landingbody1 = () => {
             src={App2}
             alt="App2 animation"
             loading="lazy"
-            className="absolute top-[10%] left-[10%] w-1/3 sm:w-1/3 lg:w-1/4 h-auto object-cover opacity-80 animate-pulse"
+            className="absolute top-[10%] left-[10%] w-1/3 sm:w-1/3 lg:w-1/3 h-auto object-cover opacity-80 animate-pulse"
           />
 
           {/* Background Animation - First GIF */}
@@ -28,7 +28,7 @@ const Landingbody1 = () => {
             src={App1}
             alt="App1 animation"
             loading="lazy"
-            className="absolute top-[30%] left-[5%] w-1/3 sm:w-1/3 lg:w-1/4 h-auto object-cover opacity-80 animate-pulse"
+            className="absolute top-[30%] left-[5%] w-1/3 sm:w-1/3 lg:w-1/3 h-auto object-cover opacity-80 animate-pulse"
           />
 
           {/* Foreground Image (Man) */}
