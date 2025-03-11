@@ -34,7 +34,7 @@ const Landingbody1 = () => {
             src={Man}
             alt="Landing visual"
             loading="lazy"
-            className="w-[80%] sm:w-[500px] lg:w-[600px] h-auto object-contain rounded-lg"
+            className="w-[80%] sm:w-[500px] lg:w-[600px] h-auto object-contain rounded-lg relative lg:left-10"
           />
         </div>
 
