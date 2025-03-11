@@ -49,6 +49,7 @@ const Contact = () => {
 
     console.log("Form Data Submitted:", formData);
     setIsSubmitted(true);
+    
   };
 
   return (
@@ -177,7 +178,7 @@ const Contact = () => {
       {/* Success Message Overlay */}
       {isSubmitted && (
         <div className="fixed inset-0 flex justify-center items-center z-50 bg-opacity-20 backdrop-blur-sm h-full">
-          <div className="bg-white p-8 rounded-lg text-center shadow-lg w-200 h-170">
+          <div className="bg-white p-8 rounded-lg text-center shadow-lg w-180 h-160">
             <img src={overley} alt="Success" className="w-80 h-80 mx-auto mb-4" />
             <h1 className="text-[#004E8F] text-4xl font-bold py-8">
               Got thoughts to melt? Let’s Chat!
