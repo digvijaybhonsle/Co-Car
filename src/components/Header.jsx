@@ -12,7 +12,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <NavLink to="/">
-            <img src={logoHeader} alt="Logo" className="w-[55px] h-16 cursor-pointer" />
+            <img src={logoHeader} alt="Logo" className="w-45 h-16 cursor-pointer" />
           </NavLink>
         </div>
         {/* Hamburger Icon */}
@@ -42,7 +42,7 @@ const Header = () => {
           </button>
         </div>
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-12 text-xl">
+        <nav className="hidden md:flex space-x-12 text-lg">
           {[
             { name: "Home", path: "/" },
             { name: "About Us", path: "/about" },
