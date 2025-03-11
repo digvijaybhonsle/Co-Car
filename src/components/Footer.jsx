@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row justify-between items-start w-full h-auto space-y-6 lg:space-y-0">
         {/* Column 1 */}
         <div className="flex-1 mb-6 lg:mb-0 items-center justify-center lg:pl-20">
-          <img className="w-60 mb-4" src={logo} alt="Logo" />
+          <img className="w-50 mb-4" src={logo} alt="Logo" />
           <p className="text-base sm:text-lg lg:text-sm leading-relaxed mt-8">
             Revolutionizing Co-Commuting Towards
           </p>
