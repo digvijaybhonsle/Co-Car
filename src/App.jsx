@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Howitworks from "./pages/Howitwas";
+import Howitworks from "./pages/Howitworks";
 import Home from "./pages/Landing";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
