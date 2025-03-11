@@ -21,20 +21,20 @@ const Landingbody1 = () => {
             src={App2}
             alt="App2 animation"
             loading="lazy"
-            className="absolute top-[12%] left-[10%] max-w-[80%] sm:max-w-[50%] lg:max-w-[40%] opacity-80 animate-pulse"
+            className="absolute top-[12%] left-[10%] w-1/3 sm:w-1/2 lg:w-1/3 opacity-80 animate-pulse"
           />
           <img
             src={App1}
             alt="App1 animation"
             loading="lazy"
-            className="absolute top-[35%] left-0 max-w-[80%] sm:max-w-[50%] lg:max-w-[40%] opacity-80 animate-pulse"
+            className="absolute top-[35%] left-0 w-1/3 sm:w-1/2 lg:w-1/3 opacity-80 animate-pulse"
           />
           {/* Foreground Image */}
           <img
             src={Man}
             alt="Landing visual"
             loading="lazy"
-            className="w-[70%] sm:w-[450px] lg:w-[500px] h-auto object-contain rounded-lg"
+            className="w-[70%] sm:w-[450px] lg:w-[450px] h-auto object-contain rounded-lg"
           />
         </div>
 
@@ -42,15 +42,15 @@ const Landingbody1 = () => {
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left px-4 sm:px-6 lg:px-10 space-y-4 sm:space-y-6">
           
           {/* Headings */}
-          <h1 className="text-[#38393C] font-bold text-xl sm:text-2xl lg:text-4xl leading-tight">
+          <h1 className="text-[#38393C] font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight">
             Transforming Co-Commuting:
           </h1>
-          <h1 className="text-[#4CAF50] font-bold text-xl sm:text-2xl lg:text-4xl leading-tight">
+          <h1 className="text-[#4CAF50] font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight">
             Smarter, Greener, Together
           </h1>
 
           {/* Description */}
-          <p className="text-[#323131] text-sm sm:text-lg lg:text-xl leading-relaxed max-w-full sm:max-w-[90%] lg:max-w-[75%]">
+          <p className="text-[#323131] text-base sm:text-lg lg:text-lg leading-relaxed max-w-full sm:max-w-[90%] lg:max-w-[80%]">
             Revolutionizing urban mobility through innovative, sustainable, and
             technology-driven car-sharing solutions, fostering efficiency, safety,
             and environmental responsibility.
@@ -58,7 +58,7 @@ const Landingbody1 = () => {
 
           {/* Button */}
           <button
-            className="bg-[#004E8F] hover:bg-[#00376a] text-white rounded-full px-6 sm:px-8 py-3 text-sm sm:text-lg shadow-lg transition-all duration-300 cursor-pointer mt-6"
+            className="bg-[#004E8F] hover:bg-[#00376a] text-white rounded-full px-6 sm:px-8 py-3 text-lg sm:text-xl lg:text-lg shadow-lg transition-all duration-300 cursor-pointer mt-6"
             onClick={handleClick}
           >
             Start Your Journey Today
