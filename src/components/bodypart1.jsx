@@ -20,21 +20,23 @@ const Landingbody1 = () => {
             src={App2}
             alt="App2 animation"
             loading="lazy"
-            className="absolute top-[10%] left-[15%] w-1/2 h-auto object-cover opacity-80 animate-pulse delay-3000 mr-15"
+            className="absolute top-[10%] left-[10%] w-1/3 sm:w-1/3 lg:w-1/4 h-auto object-cover opacity-80 animate-pulse"
           />
+
           {/* Background Animation - First GIF */}
           <img
             src={App1}
             alt="App1 animation"
             loading="lazy"
-            className="absolute top-[30%] left-0 w-1/2 h-auto object-cover opacity-80 animate-pulse"
+            className="absolute top-[30%] left-[5%] w-1/3 sm:w-1/3 lg:w-1/4 h-auto object-cover opacity-80 animate-pulse"
           />
-          {/* Foreground Image */}
+
+          {/* Foreground Image (Man) */}
           <img
             src={Man}
             alt="Landing visual"
             loading="lazy"
-            className="w-[80%] sm:w-[500px] lg:w-[600px] h-auto object-contain rounded-lg relative lg:left-10"
+            className="w-[60%] sm:w-[400px] lg:w-[500px] h-auto object-contain rounded-lg relative lg:ml-24"
           />
         </div>
 
