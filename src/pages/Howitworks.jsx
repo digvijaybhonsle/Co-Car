@@ -7,7 +7,7 @@ const Howitworks = () => {
     <div className="px-6 py-4 lg:px-35 md:px-25 mt-30">
       <div className="space-y-8 px-4 md:px-10 lg:px-20">
         {/* Section Title */}
-        <h1 className="text-4xl font-bold text-center text-gray-800">
+        <h1 className="text-4xl font-bold text-center text-gray-800 mb-4">
           How it works?
         </h1>
 

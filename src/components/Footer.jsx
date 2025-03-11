@@ -97,7 +97,7 @@ const Footer = () => {
         <div className="flex-1 text-lg mb-6 lg:mb-0 items-center justify-center">
           <h3 className="text-xl font-bold mb-5">Contact Us</h3>
           <ul className="space-y-5">
-            <li className="flex items-center space-x-2">
+            <li className="flex items-center space-x-2 text-lg">
               <img className="w-4 h-4" src={phone} alt="Phone" />
               <span>
                 <a href="tel:+918055295930" className="hover:underline">
