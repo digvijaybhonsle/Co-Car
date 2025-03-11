@@ -6,13 +6,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white px-6 py-6 lg:px-35 md:px-25 z-50">
+    <header className="fixed top-0 left-0 w-full bg-white px-6 py-6 lg:px-32 md:px-24 z-50">
       {/* Logo and Hamburger Menu */}
       <div className="flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <NavLink to="/">
-            <img src={logoHeader} alt="Logo" className="w-55 h-16 cursor-pointer" />
+            <img src={logoHeader} alt="Logo" className="w-[55px] h-16 cursor-pointer" />
           </NavLink>
         </div>
         {/* Hamburger Icon */}
@@ -54,8 +54,8 @@ const Header = () => {
               to={item.path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-500 font-semibold hover:underline underline" 
-                  : "text-gray-700 hover:text-blue-500 transition-colors" 
+                  ? "text-blue-500 font-semibold hover:underline" 
+                  : "text-gray-700 hover:text-blue-500 transition-colors"
               }
             >
               {item.name}
@@ -66,7 +66,7 @@ const Header = () => {
 
       {/* Dropdown Navigation for Mobile */}
       {isMenuOpen && (
-        <div className="absolute top-26 left-0 w-full bg-white shadow-md rounded-b-lg border-t border-gray-300 md:hidden z-10">
+        <div className="absolute top-[100px] left-0 w-full bg-white shadow-md rounded-b-lg border-t border-gray-300 md:hidden z-10">
           <nav className="flex flex-col space-y-4 py-4 px-6">
             {[
               { name: "Home", path: "/" },
@@ -79,10 +79,10 @@ const Header = () => {
                 to={item.path}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-blue-600 font-medium bg-gray-100 px-4 py-2 rounded-lg" // Active link style
-                    : "text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-all" // Inactive link style
+                    ? "text-blue-600 font-medium bg-gray-100 px-4 py-2 rounded-lg"
+                    : "text-gray-700 font-medium hover:text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-lg transition-all"
                 }
-                onClick={() => setIsMenuOpen(false)} // Close menu after clicking
+                onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
               </NavLink>
