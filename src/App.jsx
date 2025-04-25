@@ -1,5 +1,9 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { motion } from 'framer-motion';
+import {
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { motion } from "framer-motion";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -9,15 +13,15 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 
 const AppRoutes = () => {
-  const location = useLocation(); 
+  const location = useLocation();
 
   return (
     <motion.div
-      key={location.pathname} 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 2 }} 
+      key={location.pathname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 2 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1.0 }} 
+      transition={{ duration: 1.0 }}
     >
       <Routes location={location}>
         <Route path="/" element={<Home />} />
@@ -31,13 +35,11 @@ const AppRoutes = () => {
 
 function App() {
   return (
-    <Router>
-      <div className="bg-[#FFF] font-family-poppins">
-        <Header className="fixed"/>
-        <AppRoutes />
-        <Footer />
-      </div>
-    </Router>
+    <div className="bg-[#FFF] font-family-poppins">
+      <Header className="fixed" />
+      <AppRoutes />
+      <Footer />
+    </div>
   );
 }
 
